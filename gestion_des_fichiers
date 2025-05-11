@@ -1,0 +1,102 @@
+#  Gérer les fichiers sous Linux
+
+##  Description du projet
+
+L’équipe d’analystes m’a confié plusieurs tâches de gestion des fichiers sous Linux via le terminal :
+
+1. Rechercher des fichiers
+2. Créer et supprimer des répertoires
+3. Déplacer et supprimer des fichiers
+4. Créer et éditer des fichiers
+
+---
+
+##  Rechercher des fichiers
+
+- Trouver les lignes contenant le mot `"error"` dans `server_logs.txt` :
+  ```bash
+  cd logs
+  cat server_logs.txt
+  grep error server_logs.txt
+  ```
+
+- Rechercher des fichiers contenant `Q1` :
+  ```bash
+  cd /home/analyst/reports/users
+  ls | grep Q1
+  ```
+
+- Rechercher des fichiers contenant `access` :
+  ```bash
+  ls | grep access
+  ```
+
+- Rechercher l’utilisateur `jhill` dans `Q2_deleted_users.txt` :
+  ```bash
+  grep jhill Q2_deleted_users.txt
+  ```
+
+- Rechercher les utilisateurs ajoutés au département "Human Resources" :
+  ```bash
+  grep "Human Resources" Q4_added_users.txt
+  ```
+
+---
+
+##  Créer et supprimer un répertoire
+
+- Créer le dossier `logs` :
+  ```bash
+  mkdir logs
+  ```
+
+- Supprimer le dossier `temp` :
+  ```bash
+  rmdir temp
+  ```
+
+---
+
+##  Déplacer et supprimer un fichier
+
+- Déplacer le fichier `Q3patches.txt` vers le dossier `report` :
+  ```bash
+  mv Q3patches.txt /home/analyst/report
+  ```
+
+- Supprimer `tempnotes.txt` :
+  ```bash
+  rm tempnotes.txt
+  ```
+
+---
+
+##  Créer et éditer un fichier
+
+- Créer un fichier :
+  ```bash
+  touch tasks.txt
+  ```
+
+- Éditer le fichier avec nano :
+  ```bash
+  nano tasks.txt
+  ```
+
+> Utilisez `CTRL + X` pour quitter nano, `Y` pour sauvegarder, puis `Entrée` pour confirmer.
+
+- Afficher le contenu :
+  ```bash
+  cat tasks.txt
+  ```
+
+---
+
+##  Résumé
+
+Dans cette mission, j’ai :
+
+- Recherché du contenu dans des fichiers
+- Créé et supprimé des répertoires
+- Déplacé et supprimé des fichiers
+- Créé et édité un fichier via le terminal Linux
